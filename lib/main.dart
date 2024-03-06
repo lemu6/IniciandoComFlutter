@@ -1,42 +1,34 @@
 import 'package:flutter/material.dart';
 
-main() {
-  runApp(AppWidget(title: 'Fluterando'));
+void main() {
+  //runApp(MyApp)
+  runApp(MyApp());
+  /*
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Aplicativo Ola mundo'),
+        ),
+        body: Center(
+          child: Text(
+            'Ola mundo',
+            style: TextStyle(fontSize: 50, color: Colors.black),
+          ),
+        ),
+      ),
+    ),
+  );
+  */
 }
 
-class AppWidget extends StatelessWidget {
-  final String title;
-
-  const AppWidget({Key key, this.title}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.red),
-      home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatefulWidget {
-  @override
-  State<HomePage> createState() {
-    return HomePageState();
-  }
-}
-
-class HomePageState extends State<HomePage> {
-  int count = 0;
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(
-          child: GestureDetector(
-              child: Text('Flutterando'),
-              onTap: () {
-                print('clicado');
-              })),
+      child: Text('My App', textDirection: TextDirection.ltr,),
     );
   }
 }
