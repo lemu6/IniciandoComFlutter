@@ -6,6 +6,18 @@ void main() {
   /*
   runApp(
     MaterialApp(
+      home: 
+    ),
+  );
+  */
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: Text('Aplicativo Ola mundo'),
@@ -17,18 +29,6 @@ void main() {
           ),
         ),
       ),
-    ),
-  );
-  */
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Text('My App', textDirection: TextDirection.ltr,),
     );
   }
 }
