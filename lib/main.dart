@@ -1,30 +1,27 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  //runApp(MyApp)
-  runApp(MyApp());
-  /*
-  runApp(
-    MaterialApp(
-      home: 
-    ),
-  );
-  */
+  int valor = 10;
+  runApp(MyApp(title: 'Aplicativo ola mundo title', valor: valor));
+  valor++;
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  final String title;
+  final int valor;
+
+  const MyApp({Key? key, this.title = '', this.valor = 0}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Aplicativo Ola mundo'),
+          title: Text(this.title),
         ),
         body: Center(
           child: Text(
-            'Ola mundo',
+            'Ola mundo, valor é ' + this.valor.toString(),
             style: TextStyle(fontSize: 50, color: Colors.black),
           ),
         ),
