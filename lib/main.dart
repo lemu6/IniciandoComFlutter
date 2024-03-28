@@ -1,31 +1,21 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  int valor = 10;
-  runApp(MyApp(title: 'Aplicativo ola mundo title', valor: valor));
-  valor++;
+void main(){
+
+
 }
 
-class MyApp extends StatelessWidget {
-  final String title;
-  final int valor;
-
-  const MyApp({Key? key, this.title = '', this.valor = 0}) : super(key: key);
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key : key);
 
   @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(this.title),
-        ),
-        body: Center(
-          child: Text(
-            'Ola mundo, valor é ' + this.valor.toString(),
-            style: TextStyle(fontSize: 50, color: Colors.black),
-          ),
-        ),
-      ),
-    );
+    return Container();
+    child: child
   }
 }
